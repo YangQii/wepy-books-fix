@@ -11,7 +11,7 @@ export default class login extends wepy.mixin {
         }
     }
     async getStoreById() {
-        console.log('进入了')
+        console.log('login.js文件：进入了')
         try {
             let userId = await wepy.getStorage({
                 key: 'userId'
@@ -35,6 +35,6 @@ export default class login extends wepy.mixin {
     }
 
     onLoad() {
-        console.log('mixin onLoad')
+        console.log('login.js文件：mixin onLoad')
     }
 }

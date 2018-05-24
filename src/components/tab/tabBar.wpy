@@ -41,11 +41,13 @@
 <template>
     <view class="tab">
         <view class="tab_item tab_message{{active == 0 ? ' active' : ''}}" @tap="change(0)">
-            <image class="icon" src="../images/message{{active == 0 ? '_active' : ''}}.png"></image>
+            <image class="icon" src="../../images/message{{active == 0 ? '_active' : ''}}.png"></image>
+            <!--<image class="icon" src="../../resources/newicons/star.png"></image>-->
             <text class="title">首页</text>
         </view>
         <view class="tab_item tab_contact{{active == 1 ? ' active' : ''}}" @tap="change(1)">
-            <image class="icon" src="../images/contact{{active == 1 ? '_active' : ''}}.png"></image>
+            <!--<image class="icon" src="../images/contact{{active == 1 ? '_active' : ''}}.png"></image>-->
+            <image class="icon" src="../../resources/newicons/contact{{active == 1 ? '_active' : ''}}.png"></image>
             <text class="title">分类</text>
         </view>
         <view class="tab_item tab_discovery{{active == 2 ? ' active' : ''}}" @tap="change(2)">
@@ -53,7 +55,8 @@
             <text class="title">书包</text>
         </view>
         <view class="tab_item tab_me{{active == 3 ? ' active' : ''}}" @tap="change(3)">
-            <image class="icon" src="../images/me{{active == 3 ? '_active' : ''}}.png"></image>
+            <!--<image class="icon" src="../images/me{{active == 3 ? '_active' : ''}}.png"></image>-->
+            <image class="icon" src="../../resources/newicons/me{{active == 3 ? '_active' : ''}}.png"></image>
             <text class="title">我的</text>
         </view>
     </view>
@@ -73,12 +76,13 @@
 
         methods = {
             change (idx, evt) {
-                this.active = +idx
+                this.active = +idx;
+                console.log('底部导航idx为:', this.active);
             }
         }
 
         onLoad () {
-            console.log('tabBar')
+            console.log('底部导航tabBar')
         }
     }
 </script>

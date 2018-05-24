@@ -42,4 +42,11 @@ jspm_packages
 .wepyignore
 .wepycache
 dist/*
-
+node_modules/
+dist/
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/wepy-books.iml
+.idea/workspace.xml
+.idea/

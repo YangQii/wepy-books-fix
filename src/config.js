@@ -7,21 +7,22 @@ const version = 2.0
 // development and production host
 const hosts = {
     development: 'http://localhost:3020',
-    production: 'https://www.learningwang.top/books/'
+    // production: 'https://www.learningwang.top/books'
+    production: 'https://www.ohonor.xyz/bookstore'
 }
 
 // apis
 const api = {
     user: {
-		/**
-		 * login api
-		 * need header:
-		 * {
-		 *   'x-wechat-code': code,
-		 *   'x-wechat-encrypted': encryptedData,
-		 *   'x-wechat-iv': iv
-		 * }
-		 */
+        /**
+         * login api
+         * need header:
+         * {
+         *   'x-wechat-code': code,
+         *   'x-wechat-encrypted': encryptedData,
+         *   'x-wechat-iv': iv
+         * }
+         */
         hootBooks: {
             method: 'GET',
             url: '/getHotBooks/'
@@ -77,7 +78,6 @@ const api = {
             url: '/getChatMessage/'
         }
 
-
     },
     lendBook: {
         getLendBooks: {
@@ -89,7 +89,7 @@ const api = {
             method: 'GET'
         },
         isInCar: {
-            url: '/isCarTheBook/',
+            url: '/isCarTheBook',
             method: 'GET'
         },
         insertToCar: {
@@ -145,7 +145,7 @@ const api = {
             url: '/cancleAppointBooks/',
             method: 'PUT'
         },
-        cancelSendBookMsg:{
+        cancelSendBookMsg: {
             url: '/cancelSendBookMsg/',
             method: 'DELETE'
         }

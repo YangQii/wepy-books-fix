@@ -63,9 +63,11 @@
         </view>
         <view class="rank">
             <view class="rank_style_text rank_style">豆瓣评分</view>
-            <view class="rank_style_num rank_style">{{book.rating.average}}</view>
+            <!--<view class="rank_style_num rank_style">{{book.rating.average}}</view>-->
+            <view class="rank_style_num rank_style">{{mockStar}}</view>
             <view class="rank_style_rank rank_style">{{rank}}</view>
-            <view class="rank_style_text rank_style">{{book.rating.numRaters}}人</view>
+            <!--<view class="rank_style_text rank_style">{{book.rating.numRaters}}人</view>-->
+            <view class="rank_style_text rank_style">{{mockPeople}}人</view>
         </view>
     </view>
 </template>
@@ -80,7 +82,9 @@ export default class bookInfo extends wepy.component {
     data = {
         book: [],
         count: {},
-        rank: ''
+        rank: '',
+        mockStar: '',
+        mockPeople: ''
     }
     methods = {
     }
@@ -113,7 +117,11 @@ export default class bookInfo extends wepy.component {
         }
     }
     async onLoad() {
-        console.log('BookDetail-info')
+        const mockStarData = (Math.random()*10).toFixed(1);
+        const mockPeopleData = Math.ceil(Math.random()*10000);
+        this.mockStar = mockStarData;
+        this.mockPeople = mockPeopleData;
+        console.log('文件：bookinfo.wpy')
     }
     getRating(rating) {
         if (rating > 5 || rating < 0) throw new Error('数字不在范围内')
