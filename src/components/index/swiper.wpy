@@ -25,9 +25,12 @@ export default class swiper extends wepy.component {
 
     data = {
         imgUrls: [
-            '../resources/images/swiper1.jpg',
-            '../resources/images/swiper2.jpg',
-            '../resources/images/swiper3.jpg',
+            // '../resources/images/swiper1.jpg',
+            '../../resources/images/swiper1.jpg',
+            // '../resources/images/swiper2.jpg',
+            '../../resources/images/swiper2.jpg',
+            // '../resources/images/swiper3.jpg',
+            '../../resources/images/swiper3.jpg',
         ]
     }
     methods = {
@@ -35,7 +38,7 @@ export default class swiper extends wepy.component {
 
     onLoad() {
         this.$emit('indexLoadComplete', true)
-        console.log('index-swiper')
+        console.log('首页轮播图')
     }
 }
 </script>

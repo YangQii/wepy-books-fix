@@ -47,7 +47,7 @@ const api = {
     common: {
         hootBooks: {
             method: 'GET',
-            url: 'getHotBooks/'
+            url: '/getHotBooks/'
         },
         recommend: {
             method: 'GET',
