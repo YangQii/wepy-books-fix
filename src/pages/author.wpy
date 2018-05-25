@@ -56,7 +56,8 @@ export default class Author extends wepy.page {
     }
     async onLoad(params) {
         let book = await wepy.request({
-            url: 'https://api.douban.com/v2/book/isbn/' + params.isbn,
+            //url: 'https://api.douban.com/v2/book/isbn/' + params.isbn,
+            url: 'https://douban.uieee.com/v2/book/isbn/' + params.isbn,
             header: {
                 'Content-Type': 'json'
             },
