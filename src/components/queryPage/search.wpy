@@ -237,7 +237,7 @@
 <template>
     <view class="queryTop">
         <view class="searchHeader">
-            <image @tap="backToIndex" class="icon" src="../resources/icons/left.png">
+            <image @tap="backToIndex" class="icon" src="../../resources/icons/left.png">
             </image>
             <view class="input">
                 <input type="text" @input="inputChange" value='{{inputValue}}' placeholder="请输入关键字/全拼/isbn" placeholder-style=" color:#666666;font-size: 13px;font-family: 'SimHei';text-align:center">
@@ -268,7 +268,7 @@
         <view class="history" wx:if="{{!clearShow}}">
             <view class="header">
                 <text>历史记录</text>
-                <image src="../resources/icons/delete.png" @tap="clearHistory"></image>
+                <image src="../../resources/icons/delete.png" @tap="clearHistory"></image>
             </view>
             <view class="content">
                 <block wx:for="{{historyArray}}" wx:key="{{index}}">
@@ -367,9 +367,10 @@ export default class search extends wepy.component {
                 title: '提示',
                 content: '确认删除历史记录?',
                 success: (res) => {
+                    console.log('图书历史res：', res);
                     if (res.confirm) {
-                        this.historyArray = []
-                        this.$apply()
+                        this.historyArray = [];
+                        this.$apply();
                         wx.setStorageSync('historyArray', [])
                     } else {
                         return false
@@ -385,7 +386,7 @@ export default class search extends wepy.component {
             let searchBooks = await wepy.request({
                 url: api.common.search.url + this.inputValue,
                 method: api.common.search.method
-            })
+            });
 
             if (searchBooks.data.books.length < 1000) {
                 this.searchBooks = searchBooks.data
@@ -434,8 +435,10 @@ export default class search extends wepy.component {
         return str.replace(/(^\s*)|(\s*$)/g, '')
     }
     getHistory() {
-        let historyArray = wx.getStorageSync('historyArray') || []
+        let historyArray = wx.getStorageSync('historyArray') || [];
+        console.log('历史搜索书籍：', historyArray);
         this.historyArray = historyArray
+        // this.historyArray = historyArray[0].source.data.$search$books;
     }
     getPerson() {
 
