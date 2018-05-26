@@ -200,7 +200,7 @@
                         <icon bindtap="CheckAll" type="success" color="{{allCheck?'#ff7700' :'lightgrey'}}" />
                         <text>全选</text>
                     </view>
-                    <text class="footer-right-box">合计 0</text>
+                    <text class="footer-right-box">合计:¥{{checkNumRes}}元</text>
                 </view>
                 <view class="footer-right" @tap="borrowBook">
                     生成借书二维码
@@ -225,6 +225,7 @@ export default class Message extends wepy.component {
 
     }
     data = {
+        checkNumRes: 0,
         carBooks: [],
         allCheck: false,
         check: [],
@@ -244,7 +245,17 @@ export default class Message extends wepy.component {
             this.$apply()
         },
         CheckItem(index) {
-            this.check[index] = !this.check[index]
+            console.log('图书序号：', index);
+            this.check[index] = !this.check[index];
+            console.log(this.check);
+            let checkNum = 0;
+            this.check.forEach((item) => {
+                if (item === true) {
+                    checkNum +=1;
+                }
+            });
+            console.log(checkNum);
+            this.checkNumRes = checkNum * 20;
         },
         borrowBook() {
             if (this.canBorrowCount === 0) {
