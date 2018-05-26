@@ -89,7 +89,7 @@ const api = {
             method: 'GET'
         },
         isInCar: {
-            url: '/isCarTheBook',
+            url: '/isCarTheBook/',
             method: 'GET'
         },
         insertToCar: {
