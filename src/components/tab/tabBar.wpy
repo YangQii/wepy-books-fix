@@ -41,22 +41,21 @@
 <template>
     <view class="tab">
         <view class="tab_item tab_message{{active == 0 ? ' active' : ''}}" @tap="change(0)">
-            <image class="icon" src="../../images/message{{active == 0 ? '_active' : ''}}.png"></image>
-            <!--<image class="icon" src="../../resources/newicons/star.png"></image>-->
+            <image class="icon" src="../../resources/newicons/index{{active == 0 ? '-active' : ''}}.png"></image>
             <text class="title">首页</text>
         </view>
         <view class="tab_item tab_contact{{active == 1 ? ' active' : ''}}" @tap="change(1)">
             <!--<image class="icon" src="../images/contact{{active == 1 ? '_active' : ''}}.png"></image>-->
-            <image class="icon" src="../../resources/newicons/contact{{active == 1 ? '_active' : ''}}.png"></image>
+            <image class="icon" src="../../resources/newicons/sub{{active == 1 ? '-active' : ''}}.png"></image>
             <text class="title">分类</text>
         </view>
         <view class="tab_item tab_discovery{{active == 2 ? ' active' : ''}}" @tap="change(2)">
-            <image class="icon" src="../images/discovery{{active == 2 ? '_active' : ''}}.png"></image>
+            <image class="icon" src="../../resources/newicons/books{{active == 2 ? '-active' : ''}}.png"></image>
             <text class="title">书包</text>
         </view>
         <view class="tab_item tab_me{{active == 3 ? ' active' : ''}}" @tap="change(3)">
             <!--<image class="icon" src="../images/me{{active == 3 ? '_active' : ''}}.png"></image>-->
-            <image class="icon" src="../../resources/newicons/me{{active == 3 ? '_active' : ''}}.png"></image>
+            <image class="icon" src="../../resources/newicons/my{{active == 3 ? '-active' : ''}}.png"></image>
             <text class="title">我的</text>
         </view>
     </view>

@@ -186,7 +186,7 @@
                                     <text>{{item.publish}}</text>
                                     <text>isbn: {{item.isbn}}</text>
                                     <text>¥ 20</text>
-                                    <image class="delete" src="../resources/icons/delete.png" @tap="deleteItem('{{item.bookId}}')"></image>
+                                    <image class="delete" src="../../../resources/newicons/delete.png" @tap="deleteItem('{{item.bookId}}')"></image>
                                 </view>
                             </view>
                         </view>

@@ -38,7 +38,7 @@ import me from '../components/tab/tabPage/me'
 import tab from '../components/tab/tabBar'
 export default class Index extends wepy.page {
     config = {
-        'navigationBarTitleText': '求知微图书',
+        'navigationBarTitleText': '图书馆',
         'navigationBarTextStyle': 'white',
         'navigationBarBackgroundColor': '#ff7700'
     }

@@ -66,7 +66,7 @@
 </style>
 <template>
     <view class="userInfo">
-        <image class="icon" src="../resources/icons/set.png"></image>
+        <!--<image class="icon" src="../resources/icons/set.png"></image>-->
         <view class="info">
             <view class="info" wx:if="{{isLogin}}">
                 <image src="{{userInfo.avatarUrl}}"></image>

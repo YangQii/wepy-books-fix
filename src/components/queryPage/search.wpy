@@ -268,7 +268,7 @@
         <view class="history" wx:if="{{!clearShow}}">
             <view class="header">
                 <text>历史记录</text>
-                <image src="../../resources/icons/delete.png" @tap="clearHistory"></image>
+                <image src="../../resources/newicons/delete.png" @tap="clearHistory"></image>
             </view>
             <view class="content">
                 <block wx:for="{{historyArray}}" wx:key="{{index}}">
