@@ -82,7 +82,8 @@
                             <text>作者:{{item.author}}</text>
                             <text>出版社:{{item.publish}}</text>
                         </view>
-                        <text class="book-list-footer">位置:{{item.location}}</text>
+                        <!--<text class="book-list-footer">位置:{{item.location}}</text>-->
+                        <text class="book-list-footer">位置:一楼小说区</text>
                     </view>
                     <image  @tap="gotodetail('{{item.isbn}}','{{item.typeId}}','{{item.id}}')" src="{{item.imageurl}}"></image>
                 </view>
@@ -121,6 +122,7 @@ export default class rank extends wepy.component {
                 data: {
                 }
             })
+            console.log('热门图书：', hootBooks);
             let hootBooksData = hootBooks.data.hotBooks
             hootBooksData.forEach((item, index) => {
                 // item.topimgUrl = '../resources/images/top' + (index + 1) + '.png'
