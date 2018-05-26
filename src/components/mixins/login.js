@@ -20,6 +20,7 @@ export default class login extends wepy.mixin {
             this.$apply()
         } catch (error) {
             try {
+                console.log('login.js文件：catch error')
                 await interfacess.login1()
                 let userId = await wepy.getStorage({
                     key: 'userId'

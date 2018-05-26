@@ -10,6 +10,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "leancloud-storage": "^3.7.0",
     "wepy": "^1.5.8",
     "wepy-async-function": "^1.4.4",
     "wepy-com-toast": "^1.0.1",
