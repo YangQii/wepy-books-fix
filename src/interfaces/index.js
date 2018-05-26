@@ -53,7 +53,7 @@ const interfaces = {
                 dataType: 'json',
                 data: {}
             })
-            console.log('出自interface文件', userinfo.data)
+            console.log('出自src/interface文件', userinfo.data)
             await store.setStorage({
                 'userId': userinfo.data.user.id,
             })

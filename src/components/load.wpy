@@ -179,7 +179,7 @@ export default class load extends wepy.component {
     methods = {
     }
     async onLoad() {
-        console.log('文件：load.wpy')
+        console.log('文件：components/load.wpy')
         if (this.$root.$name === 'index') {
             console.log('root', this.$root.$name);
             this.index = 1

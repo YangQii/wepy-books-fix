@@ -46,7 +46,7 @@ export default class extends wepy.app {
 
     async onLaunch() {
 
-        await console.log('来自app.wpy文件：appLaunch')
+        await console.log('来自src/app.wpy文件：appLaunch')
     }
 
 }

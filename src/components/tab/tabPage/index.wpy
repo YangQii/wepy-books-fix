@@ -49,7 +49,7 @@ export default class Message extends wepy.component {
     methods = {
     }
     onLoad() {
-        console.log('index')
+        console.log('components/tabpage/index文件');
     }
 }
 </script>
