@@ -26,11 +26,11 @@ export default class swiper extends wepy.component {
     data = {
         imgUrls: [
             // '../resources/images/swiper1.jpg',
-            '../../resources/images/swiper1.jpg',
+            '../../resources/newicons/swiper1.jpg',
             // '../resources/images/swiper2.jpg',
-            '../../resources/images/swiper2.jpg',
+            '../../resources/newicons/swiper2.jpg',
             // '../resources/images/swiper3.jpg',
-            '../../resources/images/swiper3.jpg',
+            '../../resources/newicons/swiper3.jpg',
         ]
     }
     methods = {
