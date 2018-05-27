@@ -55,10 +55,10 @@
             <image src="../resources/icons/delete-white.png"></image>
         </view>
         <view class="header-query">
-            <image class="icon" src="../resources/icons/query.png" @tap="gotoquery"></image>
+            <image class="icon" src="../../resources/icons/query.png" @tap="gotoquery"></image>
             <text @tap="gotoquery">请输入关键词进行搜索</text>
         </view>
-        <image bindtap="saoyisao" class="icon" src="../resources/icons/saoyisao.png"></image>
+        <image bindtap="saoyisao" class="icon" src="../../resources/icons/saoyisao.png"></image>
     </view>
 </template>
 <script>
